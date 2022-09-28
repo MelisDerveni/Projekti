@@ -1,0 +1,37 @@
+<h3>@ViewBag.DisplayCourse.CourseName</h3>
+<p>@ViewBag.DisplayCourse.CourseDescription</p>
+<div class="row">
+    <div class="col-sm-6">
+        @foreach (var image in ViewBag.Images)
+        {
+            if(ViewBag.DisplayCourse.Courseid == image.CourseId)
+            {
+                <img class="DisplayCourseImage" src="..\Images\@image.ImagePath" alt="Card image cap ">
+                
+            }
+        }
+
+    </div>
+    <div class="col-sm-6">
+
+        @if (ViewBag.IsStudnet == false)
+        {
+            <a href="AddUserToCourse/@ViewBag.DisplayCourse.Courseid">Join Course</a>
+        }
+        else
+        {
+            <a href="Leave/@ViewBag.DisplayCourse.Courseid">Leave Course</a>
+        }
+
+            
+        
+        
+        @foreach (var item in ViewBag.Enrolls)
+        {
+            
+            <p>@item.User.Username</p>
+        }
+
+    </div>
+</div>
+

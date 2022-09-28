@@ -1,0 +1,29 @@
+@model User
+<div class="LoginBody">
+    <div class="center">
+        <h1>Sign Up</h1>
+        <form action="Register" method="post">
+            <div class="txt_field">
+                <input asp-for="Username">
+                <span asp-validation-for="Username"></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input asp-for="EmailAddress">
+                <span asp-validation-for="EmailAddress"></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input asp-for="password">
+                <span asp-validation-for="password"></span>
+                <label>Password</label>
+            </div>
+            <div class="txt_field">
+                <input asp-for="Confirm">
+                <span asp-validation-for="Confirm"></span>
+                <label>Confirm Password</label>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</div>

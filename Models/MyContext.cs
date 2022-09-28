@@ -11,4 +11,8 @@ public class MyContext : DbContext
     public MyContext(DbContextOptions options) : base(options) { }
     // the "Monsters" table name will come from the DbSet property name
     // public DbSet<Monster> Monsters { get; set; } 
+        public DbSet<User> Users { get; set; } 
+        public DbSet<Enroll> Enrolls {get;set;}
+        public DbSet<Course> Courses {get;set;}
+        public DbSet<Image> Images {get;set;}
 }

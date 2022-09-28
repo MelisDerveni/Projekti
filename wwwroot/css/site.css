@@ -1,6 +1,6 @@
 html {
 	font-size: 14px;
-	
+
 }
 
 @media (min-width: 768px) {
@@ -22,7 +22,6 @@ html {
 }
 
 body {
-	margin-bottom: 60px;
 	font-family: Verdana, Helvetica, Sans-Serif;
 }
 
@@ -72,43 +71,284 @@ nav ul li a:hover {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.reveal{
+
+.reveal {
 	position: relative;
 	transform: translateY(150px);
 	opacity: 0;
 	transition: all 1.5s ease-in;
 }
-.reveal.active{
+
+.reveal.active {
 	transform: translateY(0px);
 	opacity: 1;
 }
-.heading{
+
+.heading {
 	margin-top: 100px;
 }
-.bg-red{
+
+.bg-red {
 	background-color: #f9004d;
 	color: white;
 }
-.Guidance{
+
+.Guidance {
 	margin-top: 20px;
 	height: 400px;
 	width: 50%;
 	display: block;
 }
-.btn:hover{
+
+.btn1:hover {
 	transform: scale(1.3);
 	transition: 0.6s;
 }
-hr{
+
+.btn1 {
+	text-decoration: none;
+	color: #f9004d;
+}
+
+hr {
 	margin-top: 200px;
 }
-button{
-	display: block;
-	margin: 240px auto;
-	height: 70px;
-	width: 60%;
-	background-color: #f9004d;
-	border-radius: 20px;
+
+.row1 {
+	height: 500px;
+}
+
+.mt-200 {
+	margin-top: 100px;
+}
+
+.email-box {
+	height: 40px;
+	justify-content: center;
+	display: flex;
+	/*its better to use inline-flex*/
+	margin-top: 80px;
+}
+
+.email-box i {
+	background: white;
+	width: 40px;
+	line-height: 40px;
+	height: fit-content;
+
+}
+
+.tbox,
+.btn {
+	border: none;
+	outline: none;
+}
+
+.tbox {
+	width: 0px;
+	transition: 0.6s;
+}
+
+.email-box:hover>.tbox,
+.tbox:focus {
+	width: 260px;
+	padding: 0 10px;
+}
+
+.btn {
+	background: #f9004d;
 	color: white;
+	padding: 0 10px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.container1 {
+	color: #f9004d;
+}
+
+.row2 {
+	margin-top: 100px;
+}
+
+.col-sm-4 ul li {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+	list-style-type: none;
+	padding: 10px 25px;
+}
+
+.col-sm-4 ul li:hover {
+	color: #f9004d;
+	transition: .7s;
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.hero1 {
+	height: 100vh;
+	width: 100%;
+	background-image: url(../learning4.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.hero2 {
+	height: 100vh;
+	width: 100%;
+	background-image: url(../services2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-size: cover; */
+}
+
+.bg-blue {
+	background-color: #003366;
+	color: white;
+}
+
+.LoginBody {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(120deg, #003366, #f9004d);
+	height: 100vh;
+	overflow: hidden;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+	height: fit-content;
+}
+
+.center h1 {
+	text-align: center;
+	padding: 20px 0;
+	border-bottom: 1px solid silver;
+}
+
+.center form {
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+form .txt_field {
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 30px 0;
+}
+
+.txt_field input {
+	width: 100%;
+	padding: 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.txt_field label {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: #adadad;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.txt_field span::before {
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: #2691d9;
+	transition: .5s;
+}
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
+	top: -5px;
+	color: #2691d9;
+}
+
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before {
+	width: 100%;
+}
+
+.pass {
+	margin: -5px 0 20px 5px;
+	color: #a6a6a6;
+	cursor: pointer;
+}
+
+.pass:hover {
+	text-decoration: underline;
+}
+
+input[type="submit"] {
+	width: 100%;
+	height: 50px;
+	border: 1px solid;
+	background: #2691d9;
+	border-radius: 25px;
+	font-size: 18px;
+	color: #e9f4fb;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+}
+
+input[type="submit"]:hover {
+	border-color: #2691d9;
+	transition: .5s;
+}
+
+.signup_link {
+	margin: 30px 0;
+	text-align: center;
+	font-size: 16px;
+	color: #666666;
+}
+
+.signup_link a {
+	color: #2691d9;
+	text-decoration: none;
+}
+
+.signup_link a:hover {
+	text-decoration: underline;
+}
+.CourseBody{
 	
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(120deg, #f9004d,#003366);
+	height: fit-content;
+	overflow: hidden;	
+
+}
+.width-70{
+	width: 70%;
+}
+.card{
+	margin-bottom: 20px;
+}
+.DisplayCourseImage{
+	height: 80vh;
+	width: 100%;
 }

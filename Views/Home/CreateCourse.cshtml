@@ -1,0 +1,22 @@
+@model Course
+
+<div class="LoginBody">
+    <div class="center">
+        <h1>Create Course</h1>
+        <form action="CreateCourse" method="post" enctype="multipart/form-data">
+            <div class="txt_field">
+                <input asp-for="CourseName">
+                <span asp-validation-for="CourseName"></span>
+                <label>Course Name</label>
+            </div>
+            <div class="txt_field">
+                <input asp-for="CourseDescription">
+                <span asp-validation-for="CourseDescription"></span>
+                <label>Course Description</label>
+            </div>
+            <input asp-for = "UploadImage" >
+            <input type="submit" value="Create Course">
+        </form>
+    </div>
+</div>
+

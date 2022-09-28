@@ -1,0 +1,29 @@
+<div class="CourseBody">
+
+
+<h1>Hello, @ViewBag.LoggedInUser.Username</h1>
+<a href="CreateCourse">Create New Course</a>
+
+<div class="d-flex justify-content-around flex-wrap width-70">
+
+
+@foreach (var item in ViewBag.AllCourses)
+{
+    <div class="card " style="width: 18rem;">
+        @foreach (var image in ViewBag.Images)
+        {
+            if(item.Courseid == image.CourseId)
+            {
+                <img class="card-img-top" src="..\Images\@image.ImagePath" alt="Card image cap ">
+                
+            }
+        }
+<div class="card-body">
+    <h5 class="card-title">Course Description</h5>
+    <p class="card-text">@item.CourseDescription</p>
+    <a href="Course/@item.Courseid" class="btn btn-primary">Course Details</a>
+</div>
+</div>
+}
+</div>
+</div>

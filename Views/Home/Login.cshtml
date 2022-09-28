@@ -1,0 +1,23 @@
+@model LoginUser
+<div class="LoginBody">
+    <div class="center">
+        <h1>Login</h1>
+        <form action="Login" method="post">
+            <div class="txt_field">
+                <input asp-for="EmailAddress">
+                <span asp-validation-for="EmailAddress"></span>
+                <label>Email</label>
+            </div>
+            <div class="txt_field">
+                <input asp-for="Password">
+                <span asp-validation-for="Password"></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="Register">Signup</a>
+            </div>
+        </form>
+    </div>
+</div>
